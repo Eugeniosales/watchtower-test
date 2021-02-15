@@ -3,20 +3,13 @@ version: "3"
 services:
   nodeloop:
     image: eugeniosales/nodeloop:latest
-    ports:
-      - 3000:3000
-    restart: always
     labels:
-      - " com . centurylinklabs . watchtower . enable = true "
+      - "com.centurylinklabs.watchtower.enable=true"
 
   watchtower:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 --debug true
-    ports:
-      - 8080:8080
+    command: --interval 30
     labels:
-      - " com . centurylinklabs . watchtower . enable = true "
-    depends_on:
-      - nodeloop
+      - "com.centurylinklabs.watchtower.enable=false"
