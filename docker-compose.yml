@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nodeloop:
-    image: eugeniosales/nodeloop:latest
+    image: eugeniosales/nodeloop
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
 

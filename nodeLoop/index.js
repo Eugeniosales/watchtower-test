@@ -9,6 +9,6 @@ let count = 0;
 setInterval(() => {
   date = new Date();
   console.log(
-    `two -> ${count++}: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} `
+    `TWO -> ${count++}: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} `
   );
 }, 10000);
